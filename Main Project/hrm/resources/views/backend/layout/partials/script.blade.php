@@ -14,3 +14,24 @@
 
 <!-- App js -->
 <script src="{{asset('/')}}backend/assets/js/app.js"></script>
+
+<!-- Datatable init js -->
+        <script src="{{asset('/')}}backend/assets/js/datatables.init.js"></script>
+        
+        <!-- Responsive examples -->
+        <script src="{{asset('/')}}backend/assets/js/dataTables.responsive.min.js"></script>
+        <script src="{{asset('/')}}backend/assets/js/responsive.bootstrap4.min.js"></script>
+
+        <script src="{{asset('/')}}backend/assets/js/buttons.html5.min.js"></script>
+        <script src="{{asset('/')}}backend/assets/js/buttons.print.min.js"></script>
+        <script src="{{asset('/')}}backend/assets/js/buttons.colVis.min.js"></script>
+
+        <!-- Required datatable js -->
+        <script src="{{asset('/')}}backend/assets/js/jquery.dataTables.min.js"></script>
+        <script src="{{asset('/')}}backend/assets/js/dataTables.bootstrap4.min.js"></script>
+        <!-- Buttons examples -->
+        <script src="{{asset('/')}}backend/assets/js/dataTables.buttons.min.js"></script>
+        <script src="{{asset('/')}}backend/assets/js/buttons.bootstrap4.min.js"></script>
+        <script src="{{asset('/')}}backend/assets/js/jszip.min.js"></script>
+        <script src="{{asset('/')}}backend/assets/js/pdfmake.min.js"></script>
+        <script src="{{asset('/')}}backend/assets/js/vfs_fonts.js"></script>

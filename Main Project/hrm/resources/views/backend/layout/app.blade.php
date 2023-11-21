@@ -19,14 +19,6 @@
 
 		    @include('backend.layout.partials.left_sidebar')        
             
-            
-            
-
-            
-
-            <!-- ============================================================== -->
-            <!-- Start right Content here -->
-            <!-- ============================================================== -->
             <div class="main-content">
                 @yield('main-body')
                 
@@ -36,7 +28,6 @@
                 
             </div>
             <!-- end main content-->
-
         </div>
         <!-- END layout-wrapper -->
 
