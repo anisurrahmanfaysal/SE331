@@ -22,29 +22,43 @@
                                     <h4 class="card-title">Employee Table</h4>
                                     <a class="btn btn-outline-primary" href="{{route('employee.create')}}"><i class="uil-user-plus mx-2"></i>Add Employee</a>
                                 </div>
+                                <p class="py-2 text-center text-success">{{Session::get('message')}}</p>
                                 <table id="datatable" class="table table-bordered dt-responsive nowrap"
                                     style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                     <thead>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
+                                            <th>S No</th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Email</th>
+                                            <th>Phone</th>
+                                            <th>Address</th>
+                                            <th>Join Date</th>
+                                            <th>Gender</th>
+                                            <th>Department</th>
+                                            <th>Image</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
 
 
                                     <tbody>
-                                        <tr>
-                                            <td>Hope Fuentes</td>
-                                            <td>Secretary</td>
-                                            <td>San Francisco</td>
-                                            <td>41</td>
-                                            <td>2010/02/12</td>
-                                            <td>$109,850</td>
-                                        </tr>
+                                        @foreach ($employee as $item)
+                                            <tr>
+                                            
+                                                <td>{{$loop->iteration}}</td>
+                                                <td>{{$item->fName}}</td>
+                                                <td>{{$item->lName}}</td>
+                                                <td>{{$item->email}}</td>
+                                                <td>{{$item->phone}}</td>
+                                                <td>{{$item->address}}</td>
+                                                <td>{{$item->joindate}}</td>
+                                                <td>{{$item->gender}}</td>
+                                                <td>{{$item->department}}</td>
+                                                <td><img src="{{$item->image}}" alt=""></td>
+                                                <td>--</td>                                          
+                                            </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
 
