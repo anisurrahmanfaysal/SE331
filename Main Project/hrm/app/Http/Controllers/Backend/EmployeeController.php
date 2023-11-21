@@ -4,13 +4,18 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Requests\Admin\EmployeeRequest;
 use App\Http\Controllers\Controller;
+use App\Models\Admin\Employee;
 use Illuminate\Http\Request;
+use App\Repositories\Interface\EmployeeInterface;
 
 class EmployeeController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    protected $employeeRepository;
+    public function __construct(EmployeeInterface $companyRepository)
+    {
+        $this->employeeRepository = $companyRepository;
+    }
+    
     public function index()
     {        
         return view('backend.pages.employees.index');
@@ -29,7 +34,26 @@ class EmployeeController extends Controller
      */
     public function store(EmployeeRequest $request)
     {
-        dd($request->all());
+        $employee = new Employee();
+
+        if ($request->hasFile('picture')) {
+            $destinationPath= 'public/employee-picture/';
+            $image      = $request->file('picture');
+            $fileName   = time() . '.' . $image->getClientOriginalExtension();
+            $image->storeAs($destinationPath,$fileName);
+            $employee->image = $fileName;
+
+        }
+        $employee->fName = $request->fName;
+        $employee->lName = $request->lName;
+        $employee->email = $request->email;
+        $employee->phone = $request->phone;
+        $employee->address = $request->address;
+        $employee->joindate = $request->joindate;
+        $employee->gender = $request->gender;
+        $employee->department = $request->department;
+
+        $employee->save();
     }
 
     /**
