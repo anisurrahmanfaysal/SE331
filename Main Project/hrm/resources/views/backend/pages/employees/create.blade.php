@@ -13,16 +13,17 @@
 
                             <div>
                                 <div class="p-4 border-top">
-                                    <form>
+                                    <form action="{{route('employee.store')}}" method="POST" enctype="multipart/form-data">
+                                        @csrf
                                         <div class="row">
                                             <div class="col-lg-4">
 
                                                 <div class="mb-3">
                                                     <label class="form-label" for="manufacturername">First
                                                         Name</label>
-                                                    <input id="manufacturername" name="fname" type="text"
+                                                    <input id="manufacturername" name="fName" type="text"
                                                         class="form-control" placeholder="Enter First Name">
-                                                        @error('fname')
+                                                        @error('fName')
                                                     <span class="text-danger">{{$message}}</span>
                                                         @enderror
                                                     </div>                                               
@@ -32,9 +33,9 @@
                                                 <div class="mb-3">
                                                     <label class="form-label" for="manufacturerbrand">Last
                                                         Name</label>
-                                                    <input id="manufacturerbrand" name="lname" type="text"
+                                                    <input id="manufacturerbrand" name="lName" type="text"
                                                         class="form-control" placeholder="Enter Last Name">
-                                                        @error('lname')
+                                                        @error('lName')
                                                             <span class="text-danger">{{$message}}</span>
                                                         @enderror
                                                 </div>
@@ -56,9 +57,9 @@
                                                 <div class="mb-3">
                                                     <label class="form-label" for="manufacturername">Phone
                                                         Number</label>
-                                                    <input id="manufacturername" name="fname" type="text"
+                                                    <input id="manufacturername" name="phone" type="text"
                                                         class="form-control" placeholder="Enter Phone Number">
-                                                        @error('number')
+                                                        @error('phone')
                                                             <span class="text-danger">{{$message}}</span>
                                                         @enderror
                                                 </div>
@@ -77,7 +78,7 @@
                                             <div class="col-lg-4">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="price">Join date</label>
-                                                    <input id="price" name="joindate" type="text" class="form-control"
+                                                    <input id="price" name="joindate" type="date" class="form-control"
                                                         placeholder="Enter Join Date">
                                                         @error('joindate')
                                                             <span class="text-danger">{{$message}}</span>
@@ -119,7 +120,7 @@
                                                 <div class="mb-3">
                                                     <label class="form-label" for="price">Department</label>
                                                     <select class="form-select" name="department" aria-label="Floating label select example">
-                                                        <option selected="">Select Department</option>
+                                                        <option value="null">Select Department</option>
                                                         <option value="Web Development">Web Development</option>
                                                         <option value="Android Development">Android Development</option>
                                                         <option value="Game Development">Game Development</option>
@@ -145,8 +146,8 @@
                                         <div class="row my-4">
                                             <div class="col ms-auto">
                                                 <div class="d-flex flex-reverse flex-wrap gap-2">
-                                                    <a href="#" class="btn btn-success"> <i
-                                                            class="uil uil-file-alt"></i> Save Employee</a>
+                                                    <button type="submit" class="btn btn-outline-success"> <i
+                                                            class="uil uil-file-alt"></i> Save Employee</button>
                                                 </div>
                                             </div> <!-- end col -->
                                         </div> <!-- end row-->
