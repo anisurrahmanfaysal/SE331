@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Backend\DepartmentController;
 use App\Http\Controllers\Backend\EmployeeController;
 use App\Http\Controllers\Frontend\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -11,6 +12,7 @@ Route::get('/dashboard', function () {
 
 Route::middleware('auth')->group(function () {
     Route::resource('employee',EmployeeController::class);
+    Route::resource('department',DepartmentController::class);
 });
 
 require __DIR__.'/auth.php';
