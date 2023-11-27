@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Requests\Admin\EmployeeRequest;
 use App\Http\Controllers\Controller;
+use App\Models\Admin\Employee;
 use Illuminate\Http\Request;
 use App\Repositories\Interface\EmployeeInterface;
 
@@ -70,8 +71,11 @@ class EmployeeController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy( $id)
     {
-        //
+        // dd($id);
+        $employee = Employee::find($id);
+        $employee->delete();
+        return redirect(route('employee.index'))->with('message', 'Employee Deleted successfully.');
     }
 }

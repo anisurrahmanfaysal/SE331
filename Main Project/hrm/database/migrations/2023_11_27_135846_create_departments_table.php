@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('departments', function (Blueprint $table) {
             $table->id();
+            $table->string('dName');
+            $table->string('dArea');
+            $table->text('image');
+            $table->string('status')->default('0');
             $table->timestamps();
         });
     }

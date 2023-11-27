@@ -30,34 +30,29 @@
                                             <th>S No</th>
                                             <th>Department Name</th>
                                             <th>Department Area</th>
-                                            <th>Image</th>
                                             <th>Status</th>
+                                            <th>Image</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
 
 
                                     <tbody>
-                                        {{-- @foreach ($Department as $item)
+                                        @foreach ($departments as $item)
                                             <tr>
                                             
                                                 <td>{{$loop->iteration}}</td>
-                                                <td>{{$item->fName}}</td>
-                                                <td>{{$item->lName}}</td>
-                                                <td>{{$item->email}}</td>
-                                                <td>{{$item->phone}}</td>
-                                                <td>{{$item->address}}</td>
-                                                <td>{{$item->joindate}}</td>
-                                                <td>{{$item->gender}}</td>
-                                                <td>{{$item->department}}</td>
-                                                <td><img src="{{$item->image}}" alt=""></td>
+                                                <td>{{$item->dName}}</td>
+                                                <td>{{$item->dArea}}</td>
+                                                <td>{{$item->status}}</td>
+                                                <td><img src="{{asset('/storage/department-image/'.$item->image)}}" alt="{{$item->image}}" height="80" width="90"/></td>
                                                 <td>
-                                                    <a class="btn btn-outline-primary" href="{{route('Department.edit',$item->id)}}">Edit</a>
-                                                    <a class="btn btn-outline-danger" href="{{route('Department.edit',$item->id)}}">Delete</a>
+                                                    <a class="btn btn-outline-primary" href="{{route('department.edit',$item->id)}}">Edit</a>
+                                                    <a class="btn btn-outline-danger" href="{{route('department.edit',$item->id)}}">Delete</a>
 
                                                 </td>                                          
                                             </tr>
-                                        @endforeach --}}
+                                        @endforeach
                                     </tbody>
                                 </table>
 

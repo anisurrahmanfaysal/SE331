@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\Admin\DepartmentRequest;
+use App\Models\Admin\Department;
 
 class DepartmentController extends Controller
 {
@@ -13,7 +14,9 @@ class DepartmentController extends Controller
      */
     public function index()
     {
-        return view('backend.pages.department.index');
+        $departments = Department::get();
+
+        return view('backend.pages.department.index',compact('departments'));
     }
 
     /**
@@ -29,7 +32,24 @@ class DepartmentController extends Controller
      */
     public function store(DepartmentRequest $request)
     {
-        dd($request->all());
+        // dd($request->all());
+        $department = new Department();
+
+        if ($request->hasFile('image')) {
+            $destinationPath= 'public/department-image/';
+            $picture      = $request->file('image');
+            $fileName   = time() . '.' . $picture->getClientOriginalExtension();
+            $picture->storeAs($destinationPath,$fileName);
+            $department->image = $fileName;
+
+        }
+        $department->dName = $request->dName;
+        $department->dArea = $request->dArea;
+
+        $department->save();
+
+        return redirect(route('department.index'))->with('message', 'Department info create successfully.');
+
     }
 
     /**

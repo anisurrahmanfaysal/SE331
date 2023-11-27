@@ -55,10 +55,17 @@
                                                 <td>{{$item->joindate}}</td>
                                                 <td>{{$item->gender}}</td>
                                                 <td>{{$item->department}}</td>
-                                                <td><img src="{{$item->image}}" alt=""></td>
+                                                <td><img src="{{asset('/storage/employee-image/'.$item->image)}}" alt="{{$item->image}}" height="50" width="60"/></td>
+
+                                                <td><img src="{{$item->image}}" alt=""></td> 
                                                 <td>
                                                     <a class="btn btn-outline-primary" href="{{route('employee.edit',$item->id)}}">Edit</a>
-                                                    <a class="btn btn-outline-danger" href="{{route('employee.edit',$item->id)}}">Delete</a>
+                                                    {{-- <a class="btn btn-outline-danger" href="{{route('employee.',$item->id)}}">Delete</a> --}}
+                                                    <form id="delete-form" action="{{ route('employee.destroy', $item->id) }}" method="POST" >
+                                                        @csrf
+                                                        @method('DELETE')
+                                                           <button  class="btn btn-outline-danger" type="submit">Delete</button>
+                                                    </form> 
 
                                                 </td>                                          
                                             </tr>
