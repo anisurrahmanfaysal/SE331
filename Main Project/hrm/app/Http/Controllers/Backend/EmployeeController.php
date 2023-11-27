@@ -50,16 +50,21 @@ class EmployeeController extends Controller
      * Show the form for editing the specified resource.
      */
     public function edit(string $id)
-    {
-        //
+    {   
+        // dd($id);
+
+        $employee = $this->employeeRepository->findById($id);
+        // dd($employee);
+        return view('backend.pages.employees.edit',compact('employee'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(EmployeeRequest $request, string $id)
     {
-        //
+        $this->employeeRepository->updateData($request, $id);
+        return redirect(route('employee.index'))->with('message', 'Employee info update successfully.');
     }
 
     /**

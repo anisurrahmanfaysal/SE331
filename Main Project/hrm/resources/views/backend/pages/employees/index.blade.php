@@ -56,7 +56,11 @@
                                                 <td>{{$item->gender}}</td>
                                                 <td>{{$item->department}}</td>
                                                 <td><img src="{{$item->image}}" alt=""></td>
-                                                <td>--</td>                                          
+                                                <td>
+                                                    <a class="btn btn-outline-primary" href="{{route('employee.edit',$item->id)}}">Edit</a>
+                                                    <a class="btn btn-outline-danger" href="{{route('employee.edit',$item->id)}}">Delete</a>
+
+                                                </td>                                          
                                             </tr>
                                         @endforeach
                                     </tbody>

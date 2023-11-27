@@ -7,5 +7,5 @@ interface EmployeeInterface
   public function AllData();
   public function findById($id);
   public function storeData($request);
-  public function updateData($request, $employee);
+  public function updateData($request, $id);
 }
