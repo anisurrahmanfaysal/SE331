@@ -10,7 +10,7 @@
         @include('frontend.layout.partials.style')
 
         <!-- title of site -->
-        <title>Directory Landing Page</title>
+        <title>HR Management</title>
 
     </head>
 
