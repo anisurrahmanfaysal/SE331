@@ -8,12 +8,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
         @include('frontend.layout.partials.style')
-		
+
         <!-- title of site -->
         <title>Directory Landing Page</title>
 
     </head>
-	
+
 	<body>
 		<!-- top-area Start -->
 		<section class="top-area">
@@ -59,26 +59,26 @@
 		<section id="home" class="welcome-hero">
 			<div class="container">
 				<div class="welcome-hero-txt">
-					<h2>best place to find and explore <br> that all you need </h2>
+					<h2>AI Based<br> HR Management System </h2>
 					<p>
-						Find Best Place, Restaurant, Hotel, Real State and many more think in just One click 
+						Automate your HR process with our AI based HR Management System
 					</p>
 				</div>
 				<div class="welcome-hero-serch-box">
 					<div class="welcome-hero-form">
 						<div class="single-welcome-hero-form">
-							<h3>what?</h3>
+							<h3>Name?</h3>
 							<form action="index.html">
-								<input type="text" placeholder="Ex: palce, resturent, food, automobile" />
+								<input type="text" placeholder="Ex: Mr. Esraq Humayun, Esraq, EH" />
 							</form>
 							<div class="welcome-hero-form-icon">
 								<i class="flaticon-list-with-dots"></i>
 							</div>
 						</div>
 						<div class="single-welcome-hero-form">
-							<h3>location</h3>
+							<h3>Designation</h3>
 							<form action="index.html">
-								<input type="text" placeholder="Ex: london, newyork, rome" />
+								<input type="text" placeholder="Ex: Lecturer" />
 							</form>
 							<div class="welcome-hero-form-icon">
 								<i class="flaticon-gps-fixed-indicator"></i>
@@ -87,7 +87,7 @@
 					</div>
 					<div class="welcome-hero-serch">
 						<button class="welcome-hero-btn" onclick="window.location.href='#'">
-							 search  <i data-feather="search"></i> 
+							 search  <i data-feather="search"></i>
 						</button>
 					</div>
 				</div>
@@ -169,7 +169,7 @@
 								</div>
 								<h2><a href="#">choose <span> what to</span> do</a></h2>
 								<p>
-									Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut laboremagna aliqua. 
+									Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut laboremagna aliqua.
 								</p>
 								<button class="welcome-hero-btn how-work-btn" onclick="window.location.href='#'">
 									read more
@@ -183,7 +183,7 @@
 								</div>
 								<h2><a href="#">find <span> what you want</span></a></h2>
 								<p>
-									Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut laboremagna aliqua. 
+									Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut laboremagna aliqua.
 								</p>
 								<button class="welcome-hero-btn how-work-btn" onclick="window.location.href='#'">
 									read more
@@ -197,7 +197,7 @@
 								</div>
 								<h2><a href="#">explore <span> amazing</span> place</a></h2>
 								<p>
-									Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut laboremagna aliqua. 
+									Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut laboremagna aliqua.
 								</p>
 								<button class="welcome-hero-btn how-work-btn" onclick="window.location.href='#'">
 									read more
@@ -207,7 +207,7 @@
 					</div>
 				</div>
 			</div><!--/.container-->
-		
+
 		</section><!--/.works-->
 		<!--works end -->
 
@@ -428,7 +428,7 @@
 		<!-- statistics strat -->
 		<section id="statistics"  class="statistics">
 			<div class="container">
-				<div class="statistics-counter"> 
+				<div class="statistics-counter">
 					<div class="col-md-3 col-sm-6">
 						<div class="single-ststistics-box">
 							<div class="statistics-content">
@@ -461,10 +461,10 @@
 							<h3>happy clients</h3>
 						</div><!--/.single-ststistics-box-->
 					</div><!--/.col-->
-				</div><!--/.statistics-counter-->	
+				</div><!--/.statistics-counter-->
 			</div><!--/.container-->
 
-		</section><!--/.counter-->	
+		</section><!--/.counter-->
 		<!-- statistics end -->
 
 
@@ -489,11 +489,11 @@
 								</button>
 							</form>
 						</div>
-					</div>	
+					</div>
 				</div>
 			</div>
 
-		</section><!--/subscription-->	
+		</section><!--/subscription-->
 		<!--subscription end -->
 
 
@@ -551,12 +551,12 @@
 					</div>
 				</div>
 			</div><!--/.container-->
-			
+
 		</section><!--/.blog-->
 		<!--blog end -->
 
-        @include('frontend.layout.partials.footer')    
+        @include('frontend.layout.partials.footer')
         @include('frontend.layout.partials.script')
     </body>
-	
+
 </html>
