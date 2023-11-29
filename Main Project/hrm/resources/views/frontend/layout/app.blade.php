@@ -28,7 +28,7 @@
                             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                                 <i class="fa fa-bars"></i>
                             </button>
-                            <a class="navbar-brand" href="index.html">list<span>race</span></a>
+                            <a class="navbar-brand" href="index.html">Human<span>Resource</span></a>
 
                         </div><!--/.navbar-header-->
                         <!-- End Header Navigation -->
@@ -76,7 +76,6 @@
 		<!-- statistics strat -->
 		@include('frontend.layout.partials.statistics')
 		<!-- statistics end -->
-
 
 		<!--subscription strat -->
 		@include('frontend.layout.partials.subscription')

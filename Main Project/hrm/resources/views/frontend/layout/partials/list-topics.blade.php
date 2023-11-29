@@ -7,8 +7,7 @@
                         <div class="single-list-topics-icon">
                             <i class="flaticon-restaurant"></i>
                         </div>
-                        <h2><a href="#">resturent</a></h2>
-                        <p>150 listings</p>
+                        <h2><a href="#">Food Court</a></h2>
                     </div>
                 </li>
                 <li>
@@ -25,7 +24,7 @@
                         <div class="single-list-topics-icon">
                             <i class="flaticon-building"></i>
                         </div>
-                        <h2><a href="#">hotels</a></h2>
+                        <h2><a href="#">Hall</a></h2>
                         <p>185 listings</p>
                     </div>
                 </li>
@@ -43,7 +42,7 @@
                         <div class="single-list-topics-icon">
                             <i class="flaticon-transport"></i>
                         </div>
-                        <h2><a href="#">automotion</a></h2>
+                        <h2><a href="#">Transport</a></h2>
                         <p>120 listings</p>
                     </div>
                 </li>
