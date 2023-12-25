@@ -40,11 +40,18 @@
                         <span>Dashboard</span>
                     </a>
                 </li>
-{{-- Employees --}}
+                {{-- Employees --}}
                 <li>
                     <a href="{{route('employee.index')}}">
                         <i class="fa fa-users"></i>
                         <span>Employees</span>
+                    </a>
+                </li>
+                {{-- Department --}}
+                <li>
+                    <a href="{{route('department.index')}}">
+                        <i class="fa fa-users"></i>
+                        <span>Department</span>
                     </a>
                 </li>
             </ul>

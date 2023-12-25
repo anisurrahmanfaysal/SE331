@@ -10,7 +10,7 @@ class EmployeeRepositories implements EmployeeInterface {
         return Employee::get();
     }
     public function findById($id){
-
+        return Employee::findOrFail($id);
     }
     public function storeData($request){
         // dd($request->all());
@@ -35,7 +35,25 @@ class EmployeeRepositories implements EmployeeInterface {
 
         $employee->save();
     }
-    public function updateData($request, $employee){
+    public function updateData($request, $id){
+        $employee = $this->findById($id);
+        if ($request->hasFile('image')) {
+            $destinationPath= 'public/employee-image/';
+            $picture      = $request->file('image');
+            $fileName   = time() . '.' . $picture->getClientOriginalExtension();
+            $picture->storeAs($destinationPath,$fileName);
+            $employee->image = $fileName;
 
+        }
+        $employee->fName = $request->fName;
+        $employee->lName = $request->lName;
+        $employee->email = $request->email;
+        $employee->phone = $request->phone;
+        $employee->address = $request->address;
+        $employee->joindate = $request->joindate;
+        $employee->gender = $request->gender;
+        $employee->department = $request->department;
+
+        $employee->Update();
     }
 }
