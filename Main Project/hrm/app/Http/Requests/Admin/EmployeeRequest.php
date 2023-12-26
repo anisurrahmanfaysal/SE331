@@ -21,7 +21,7 @@ class EmployeeRequest extends FormRequest
      */
     public function rules(): array
     {
-        
+
         $rules = [
             'fName' => 'required', 'string', 'max:255',
             'lName' => 'required', 'string', 'max:255',
@@ -40,6 +40,5 @@ class EmployeeRequest extends FormRequest
             }
 
         return $rules;
-
     }
 }
