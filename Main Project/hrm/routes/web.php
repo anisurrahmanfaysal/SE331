@@ -22,5 +22,5 @@ Route::middleware('auth')->group(function () {
     Route::resource('department',DepartmentController::class);
 });
 
-// Include the routes from the auth.php file
+// Include the route from the auth.php file
 require __DIR__.'/auth.php';
